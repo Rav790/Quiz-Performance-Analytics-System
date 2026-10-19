@@ -1,0 +1,36 @@
+
+######################################################################
+# SECTION 1: Database Setup & Seeding
+######################################################################
+
+
+=== Database Schema Setup ===
+  [DROPPED] students
+  [CREATED] students with $jsonSchema validation
+  [DROPPED] questions
+  [CREATED] questions with $jsonSchema validation
+  [DROPPED] attempts
+  [CREATED] attempts with $jsonSchema validation
+
+=== Creating Indexes ===
+  [INDEX] students: roll_no (unique), email (unique)
+  [INDEX] questions: (topic, difficulty)
+  [INDEX] attempts: (student_id, attempted_at desc), attempted_at
+
+=== Schema setup complete ===
+
+
+=== Seeding Database ===
+
+Generating students...
+  Inserted 30 students
+Generating questions...
+  Inserted 60 questions
+Generating attempts...
+  Inserted 300 attempts
+
+=== Seed Summary ===
+  students:  30
+  questions: 60
+  attempts:  300
+

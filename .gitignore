@@ -1,0 +1,19 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local environment configuration
+.env
+
+# University submission docs (kept local only)
+report/
+mongo_shell_queries.js
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

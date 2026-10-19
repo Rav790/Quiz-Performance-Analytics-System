@@ -1,0 +1,11 @@
+
+######################################################################
+# SECTION 6: DELETE Operations
+######################################################################
+
+
+--- deleteOne: Delete a question ---
+  [DELETE] Question 6ad57bad0b61404bfb7b5817 deleted
+
+--- deleteMany: Delete attempts older than 170 days ---
+  [DELETE] Deleted 14 attempts before 2026-05-02

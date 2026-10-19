@@ -1,0 +1,39 @@
+
+######################################################################
+# SECTION 8: explain() - Index Usage
+######################################################################
+
+
+--- explain() on indexed query: find student by roll_no ---
+  Query: db.students.find({ roll_no: 'LPU2026001' })
+
+  Winning Plan:
+    {
+        "isCached": false,
+        "stage": "EXPRESS_IXSCAN",
+        "keyPattern": "{ roll_no: 1 }",
+        "indexName": "idx_roll_no_unique"
+    }
+
+  [OK] IXSCAN (Index Scan) detected!
+  Index used: idx_roll_no_unique
+  This confirms the index on roll_no is being used.
+
+
+--- explain() on NON-indexed query: find by name (no index) ---
+  Query: db.students.find({ name: 'Aarav Sharma' })
+
+  Winning Plan:
+    {
+        "isCached": false,
+        "stage": "COLLSCAN",
+        "filter": {
+            "name": {
+                "$eq": "Aarav Sharma"
+            }
+        },
+        "direction": "forward"
+    }
+
+  [NOTICE] COLLSCAN detected (as expected - 'name' has no index)
+  This shows the performance difference between indexed and non-indexed queries.

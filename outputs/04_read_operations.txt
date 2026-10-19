@@ -1,0 +1,42 @@
+
+######################################################################
+# SECTION 4: READ Operations
+######################################################################
+
+
+--- findOne: Find student by roll number ---
+  [READ] Found: Aarav Sharma (LPU2026001) - CSE Sem 5
+
+--- find: List DBMS questions ---
+  [READ] Found 5 questions (filter: topic=DBMS, difficulty=None)
+    - [hard] What is the difference between BCNF and 3NF?... (3 marks)
+    - [hard] In a B+ tree index, where are the actual data pointers store... (3 marks)
+    - [hard] Which concurrency control protocol uses timestamps to determ... (3 marks)
+    - [hard] In the CAP theorem, which two properties does MongoDB priori... (3 marks)
+    - [medium] In a relational database, what does ACID stand for in the co... (2 marks)
+
+--- find: Search students by name ---
+  [READ] Found 1 students matching 'sharma':
+    - Aarav Sharma (LPU2026001)
+
+--- find: Get student attempts ---
+  [READ] Found 10 attempts for student 6ad57bad0b61404bfb7b57f9
+    - Demo Quiz: 100.0% (2026-10-19)
+    - DBMS Weekly Quiz 5: 70.0% (2026-10-01)
+    - DSA Weekly Quiz 5: 60.0% (2026-09-25)
+    - Networks Assessment 2: 70.0% (2026-09-04)
+    - DBMS Practice Test 4: 50.0% (2026-08-07)
+    ... and 5 more
+
+--- countDocuments examples ---
+  [COUNT] Total students: 31
+  [COUNT] DBMS questions: 12
+  [COUNT] Attempts with score >= 70%: 96
+
+--- Query operators: $in, $gte/$lte, $and, $or ---
+
+  --- Query Operator Examples ---
+  [$in] Students in CSE or IT: 13
+  [$gte/$lte] Attempts with score 40-80%: 262
+  [$and] Hard DBMS questions: 4
+  [$or] Sem 7 OR CSE: 13

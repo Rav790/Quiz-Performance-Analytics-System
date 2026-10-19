@@ -1,0 +1,23 @@
+
+######################################################################
+# SECTION 5: UPDATE Operations
+######################################################################
+
+
+--- $set: Update student semester ---
+  [UPDATE] LPU2026001 semester updated to 8
+
+--- $set with updateMany: Deactivate ME students ---
+  [UPDATE] Deactivated 6 students in ME
+
+--- $addToSet: Add tag to question ---
+  [UPDATE] Tag 'important' added to question 6ad57bad0b61404bfb7b5817
+
+--- $inc: Increment marks for hard questions ---
+  [UPDATE] Incremented marks for 20 hard questions
+
+--- upsert: Upsert a student ---
+  [UPSERT] New student inserted: Upsert Student (ID: 6ad57badda5ad7becc3b39e5)
+
+--- arrayFilters: Fix an attempt answer ---
+  [UPDATE] Answer fixed. New score: 40.0% (4/10 correct)
